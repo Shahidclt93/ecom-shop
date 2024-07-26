@@ -27,10 +27,12 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 *,
 ::before,
 ::after {
@@ -45,41 +47,51 @@ body {
   color: var(--dark-color);
   background-color: var(--white-color);
 }
+
 a {
   text-decoration: none;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
+
 img {
   max-width: 100%;
   vertical-align: middle;
 }
+
 ul {
   list-style: none;
 }
+
 p {
   margin: 0 0 15px;
 }
+
 input,
 textarea,
 select {
   font: inherit;
   width: 100%;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
 }
+
 input::placeholder,
 textarea::placeholder {
   color: inherit;
 }
+
 button {
   font: inherit;
 }
+
 strong {
   font-weight: var(--fw600);
 }
+
 h1,
 h2,
 h3,
@@ -88,15 +100,19 @@ h4 {
   font-weight: 400;
   line-height: normal;
 }
+
 h1 {
   font-size: 2.75em;
 }
+
 h2 {
   font-size: 2.5em;
 }
+
 h3 {
   font-size: 2em;
 }
+
 h4 {
   font-size: 1rem;
 }
@@ -121,17 +137,20 @@ h4 {
   border-radius: 50%;
   color: var(--white-color);
 }
+
 @keyframes fade-bottom {
   0% {
     transform: translateY(10px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
-.button > [class*="-btn"] {
+
+.button>[class*="-btn"] {
   font-size: var(--fs14);
   font-weight: var(--fw600);
   text-transform: uppercase;
@@ -143,27 +162,33 @@ h4 {
   transition: var(--transition-background), var(--transition-color),
     var(--transition-border);
 }
+
 .primary-btn,
 .secondary-btn {
   border-color: var(--dark-color);
 }
+
 .primary-btn:hover {
   background-color: var(--dark-color);
   color: var(--white-color);
 }
+
 .secondary-btn {
   background-color: var(--dark-color);
   color: var(--white-color);
 }
+
 .secondary-btn:hover {
   background-color: transparent;
   border-color: var(--dark-color);
   color: var(--dark-color);
 }
+
 .title {
   font-size: clamp(30px, -0.875em + 8.333vw, var(--fs-max, 40px));
 }
-.grey-color{
+
+.grey-color {
   color: var(--grey-color);
 }
 
@@ -184,6 +209,7 @@ h4 {
   display: inline-block;
   transition: var(--transition-color);
 }
+
 .list-block a:hover {
   color: var(--dark-color);
 }
@@ -200,10 +226,12 @@ h4 {
   transform: translateY(-50%);
   transition: width 0.3s, height 0.3s;
 }
+
 .list-block a:hover::before {
   width: 8px;
   height: 8px;
 }
+
 .dot-title {
   font-family: var(--primary-font);
   font-size: var(--fs14);
@@ -214,10 +242,12 @@ h4 {
 .dot-title a {
   transition: var(--transition-color);
 }
+
 .dot-title a:hover,
 .dotgrid .product-price .before {
   color: var(--light-color);
 }
+
 .overlay,
 .mobile-menu {
   position: fixed;
@@ -226,6 +256,7 @@ h4 {
   right: 0;
   bottom: 0;
 }
+
 .overlay {
   background-color: var(--dark-color);
   opacity: 0;
@@ -234,22 +265,25 @@ h4 {
   z-index: 999;
   transition: opacity 0.3s, visibility 0.3s;
 }
+
 .overlay.active {
   opacity: 0.75;
   visibility: visible;
   pointer-events: all;
 }
-.scrollto > .wrapper {
+
+.scrollto>.wrapper {
   --display: flex;
   padding-bottom: 20px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
 }
+
 .scrollto .wrapper::-webkit-scrollbar {
   width: 12px;
-  height: 12px;
 }
+
 .scrollto .wrapper::-webkit-scrollbar-thumb {
   --border-color: var(var(--white-color));
   background-color: var(--light-color);
@@ -268,20 +302,23 @@ h4 {
 }
 
 .inner-header :where(.wrap, .menu > ul),
-.list-inline > ul {
+.list-inline>ul {
   display: flex;
   align-items: center;
 }
+
 .header-left,
 .header-right {
   flex-grow: 1;
 }
+
 .header-center nav {
   display: none;
   grid-template-columns: 1fr 1fr;
   gap: 180px;
   max-width: 720px;
 }
+
 .header-center .branding {
   position: absolute;
   left: 0;
@@ -289,13 +326,15 @@ h4 {
   top: 0;
   pointer-events: none;
 }
+
 .header-center .branding a {
   font-family: var(--secondary-font);
   font-size: 30px;
   line-height: inherit;
   pointer-events: auto;
 }
-.header-center .menu > ul > li > a {
+
+.header-center .menu>ul>li>a {
   font-size: var(--fs14);
   font-weight: var(--fw600);
   text-transform: uppercase;
@@ -303,9 +342,11 @@ h4 {
   display: flex;
   gap: 5px;
 }
+
 .header-right ul {
   justify-content: flex-end;
 }
+
 .list-inline a,
 .menu-trigger,
 .close-trigger {
@@ -313,9 +354,9 @@ h4 {
   font-size: 24px;
   padding: 0 10px;
   line-height: 1;
-  display: flex;
   transform: var(--transition-color);
 }
+
 .list-inline a:hover,
 .menu-trigger:hover {
   color: var(--light-color);
@@ -324,26 +365,28 @@ h4 {
 .header-left .list-inline {
   display: none;
 }
+
 :where(.header-left, .header-right) li {
   display: flex;
   align-items: center;
   height: 80px;
 }
+
 .dotgrid .wrapper {
   display: var(--display, grid);
   --grid-col: 175px;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(var(--grid-col), 100%), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit,
+      minmax(min(var(--grid-col), 100%), 1fr));
   gap: var(--gutter, 30px);
 }
+
 .dotgrid .dot-image {
   position: relative;
   margin-bottom: 15px;
   overflow: hidden;
 }
-.dotgrid .dot-image > a,
+
+.dotgrid .dot-image>a,
 .dotgrid .thumbnail.hover,
 .dotgrid .actions,
 .dotgrid .dot-image .label {
@@ -353,9 +396,11 @@ h4 {
   right: 0;
   bottom: 0;
 }
-.dotgrid .dot-image > a {
+
+.dotgrid .dot-image>a {
   z-index: 1;
 }
+
 .dotgrid .thumbnail.hover {
   opacity: 0;
   transition: opacity .75s ease,
@@ -363,10 +408,12 @@ h4 {
   backface-visibility: hidden;
   transform: translateZ(0);
 }
+
 .dotgrid .dot-image:hover .thumbnail.hover {
   opacity: 1;
   transform: scale3d(1.1, 1.1, 1.11) translateZ(0);
 }
+
 .dotgrid .actions {
   z-index: 2;
   top: auto;
@@ -375,16 +422,19 @@ h4 {
   opacity: 0;
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
+
 .dot-image:hover .actions {
   opacity: 1;
   transform: translateZ(0);
 }
+
 .dotgrid .actions ul,
 .dotgrid .dot-image .label {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
+
 .dotgrid .actions ul li a,
 .dotgrid .dot-image .label span {
   font-size: 20px;
@@ -397,14 +447,17 @@ h4 {
   border-radius: 50%;
   transition: var(--transition-background), var(--transition-color);
 }
+
 .dotgrid .actions ul li a:hover {
   background-color: var(--dark-color);
   color: var(--white-color);
 }
+
 .dotgrid .dot-image .label {
   top: auto;
   bottom: 20px;
 }
+
 .dotgrid .dot-image .label span {
   font-size: 12px;
   font-weight: var(--fw600);
@@ -415,6 +468,7 @@ h4 {
 .dotgrid .dot-info {
   text-align: center;
 }
+
 .dotgrid .product-price .before {
   text-decoration: line-through;
 }
@@ -432,31 +486,38 @@ h4 {
   z-index: 1000;
   display: none;
 }
+
 .inner-header .search .input {
   display: flex;
   border: 0;
   height: 80px;
   font-size: 18px;
 }
+
 .search-float.active {
   display: block;
 }
+
 form.search {
   position: relative;
 }
+
 form.search :where(i, .submit) {
   position: absolute;
   left: 0;
   top: 0;
 }
+
 form.search :where(i:last-child, .submit) {
   left: auto;
   right: 0;
 }
+
 form.search .input {
   outline: 0;
   padding: 15px 50px;
 }
+
 form.search i {
   font-size: 20px;
   display: flex;
@@ -466,7 +527,8 @@ form.search i {
   height: 100%;
   cursor: pointer;
 }
-form.search .submit{
+
+form.search .submit {
   border: 0;
   background-color: transparent;
   color: transparent;
@@ -476,7 +538,8 @@ form.search .submit{
   z-index: 1;
   cursor: pointer;
 }
-form :where(input, select, textarea){
+
+form :where(input, select, textarea) {
   font-size: var(--fs14);
   border: 1px solid var(--light-color);
   outline: 0;
@@ -484,10 +547,12 @@ form :where(input, select, textarea){
   padding: 10px 20px;
   transition: border .3s;
 }
-form :where(input, select, textarea):focus{
+
+form :where(input, select, textarea):focus {
   border-color: var(--dark-color);
 }
-form :where(input, select, textarea)::placeholder{
+
+form :where(input, select, textarea)::placeholder {
   color: var(--grey-color);
 }
 
@@ -505,6 +570,7 @@ form :where(input, select, textarea)::placeholder{
   visibility: visible;
   opacity: 1;
 }
+
 .mobile-menu .wrap {
   position: relative;
   max-width: calc(100% - 40px);
@@ -515,9 +581,11 @@ form :where(input, select, textarea)::placeholder{
   transform: translateX(var(---transX, -100%));
   transition: var(--transition-transform);
 }
+
 .mobile-menu.active .wrap {
   transform: translateX(0);
 }
+
 .mobile-menu .close-trigger,
 .mobile-menu .child-trigger {
   position: absolute;
@@ -530,27 +598,33 @@ form :where(input, select, textarea)::placeholder{
   align-items: center;
   justify-content: center;
 }
+
 .mobile-menu .main-menu {
   height: 100%;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
 }
-.mobile-menu nav > ul {
+
+.mobile-menu nav>ul {
   padding: 20px 0;
 }
-.mobile-menu nav > ul > li > a {
+
+.mobile-menu nav>ul>li>a {
   position: relative;
   padding: 12px 0;
   font-weight: 500;
   transition: var(--transition-color);
 }
+
 .mobile-menu nav li :where(li, a) {
   display: block;
 }
-.mobile-menu nav > ul > li > a:hover {
+
+.mobile-menu nav>ul>li>a:hover {
   color: var(--grey-color);
 }
+
 .mobile-menu .child-trigger {
   color: var(--dark-color);
   font-size: 20px;
@@ -561,9 +635,11 @@ form :where(input, select, textarea)::placeholder{
   transition: var(--transition-background);
   z-index: 1;
 }
+
 .mobile-menu .child-trigger:hover {
   background-color: var(--light-color);
 }
+
 .mobile-menu nav .sub-menu {
   padding-left: 15px;
   max-height: 0;
@@ -571,15 +647,22 @@ form :where(input, select, textarea)::placeholder{
   visibility: hidden;
   transition: 0.3s ease-in-out;
 }
+
 .mobile-menu nav li.active .sub-menu {
   max-height: 1000px;
   visibility: visible;
 }
+
+.mobile-menu nav li.active .child-trigger i {
+  transform: rotate(-180deg);
+}
+
 .mobile-menu .button {
   margin-top: auto;
   padding: 20px 0 40px;
   text-align: center;
 }
+
 .mobile-menu .button a {
   display: block;
   margin-top: 10px;
@@ -589,6 +672,7 @@ form :where(input, select, textarea)::placeholder{
 .slider :where(.image, .ob-cover) {
   position: relative;
 }
+
 .slider .ob-cover {
   height: 430px;
 }
@@ -599,6 +683,7 @@ form :where(input, select, textarea)::placeholder{
   width: 100%;
   object-fit: cover;
 }
+
 .slider .title-info .wrap {
   display: flex;
   flex-direction: column;
@@ -609,6 +694,7 @@ form :where(input, select, textarea)::placeholder{
   margin: 0 auto;
   text-align: center;
 }
+
 .slider .title-info .price {
   position: relative;
   font-size: 25px;
@@ -622,12 +708,14 @@ form :where(input, select, textarea)::placeholder{
   justify-content: center;
   border-radius: 50%;
 }
+
 .slider .custom-pagination {
   position: absolute;
   right: 30px;
   top: 50%;
   bottom: 50%;
 }
+
 .slider .custom-pagination .swiper-pagination {
   display: flex;
   flex-direction: column;
@@ -635,76 +723,92 @@ form :where(input, select, textarea)::placeholder{
   justify-content: center;
   gap: 5px;
 }
+
 .slider .custom-pagination .swiper-pagination-bullet-active {
   background-color: var(--dark-color);
 }
- .slider .title-info :where(span, h3, .button){
+
+.slider .title-info :where(span, h3, .button) {
   transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
   transition: transform .75s, opacity .75s, visibility .75s;
- }
-.slider .swiper-slide-active .title-info :where(span, h3, .button){
+}
+
+.slider .swiper-slide-active .title-info :where(span, h3, .button) {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
 }
-.slider .swiper-slide-active .title-info h3{
+
+.slider .swiper-slide-active .title-info h3 {
   transition-delay: .5s;
 }
-.slider .swiper-slide-active .title-info .button{
+
+.slider .swiper-slide-active .title-info .button {
   transition-delay: .75s;
 
 }
 
-  /**************************************** Guide  ****************************************/
-  .page-home main > div:not(.slider){
-    padding: 100px 0;
-  }
-  .guide{
-    background-color: var(--flashwhite-color);
-  }
-  main > div .heading{
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .guide .dotgrid .wrapper{
-    --grid-col:260px;
-  }
-  :is(.guide,.fromblog) .dot-image .thumbnail{
-    position: relative;
-    opacity: unset;
-  }
-  :is(.guide,.fromblog) .dot-image .thumbnail img{
-    width: 100%;
-  }
-  .guide .dot-title{
-    --fs14: 18px;
-    --fw600: 400;
-    padding: 10px 0;
-  }
-  .guide .dot-title p {
-    line-height: 1.4;
-  }
-.scrollto .wrapper .item{
+/**************************************** Guide  ****************************************/
+.page-home main>div:not(.slider) {
+  padding: 100px 0;
+}
+
+.guide {
+  background-color: var(--flashwhite-color);
+}
+
+main>div .heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.guide .dotgrid .wrapper {
+  --grid-col: 260px;
+}
+
+:is(.guide, .fromblog) .dot-image .thumbnail {
+  position: relative;
+  opacity: unset;
+}
+
+:is(.guide, .fromblog) .dot-image .thumbnail img {
+  width: 100%;
+}
+
+.guide .dot-title {
+  --fs14: 18px;
+  --fw600: 400;
+  padding: 10px 0;
+}
+
+.guide .dot-title p {
+  line-height: 1.4;
+}
+
+.scrollto .wrapper .item {
   width: 290px;
   scroll-snap-align: start;
   flex-shrink: 0;
 }
 
 /**************************************** Carousel ****************************************/
-.carousel  .inner-wrapper{
+.carousel .inner-wrapper {
   position: relative;
 }
-.carousel .dotgrid .wrapper{
+
+.carousel .dotgrid .wrapper {
   display: flex;
   grid-template-columns: unset;
   gap: unset;
 }
- .carousel .nav > div::after{
+
+.carousel .nav>div::after {
   content: none;
- }
-.carousel .nav > div{
+}
+
+.carousel .nav>div {
   width: 40px;
   height: 40px;
   border: 1px solid var(--grey-color);
@@ -713,29 +817,34 @@ form :where(input, select, textarea)::placeholder{
   font-size: 20px;
   -webkit-tap-highlight-color: transparent;
   transition: var(--transition-background),
-  var(--transition-color),
-  var(--transition-border);
+    var(--transition-color),
+    var(--transition-border);
 }
-.carousel .nav > div:hover{
+
+.carousel .nav>div:hover {
   background-color: var(--dark-color);
   color: var(--white-color);
   border-color: var(--dark-color);
 }
-.carousel .nav .swiper-button-disabled{
+
+.carousel .nav .swiper-button-disabled {
   opacity: 0;
 }
 
-  /**************************************** By-categories ****************************************/
-  .bycats .heading{
-    display: flex; 
-    justify-content: center;
-  }
-.bycats .heading > span{
+/**************************************** By-categories ****************************************/
+.bycats .heading {
+  display: flex;
+  justify-content: center;
+}
+
+.bycats .heading>span {
   font-family: var(--secondary-font);
   font-size: 32px;
   margin-right: 20px;
 }
-.bycats .heading > span,.opt-trigger{
+
+.bycats .heading>span,
+.opt-trigger {
   height: 44px;
   display: flex;
   align-items: center;
@@ -743,10 +852,12 @@ form :where(input, select, textarea)::placeholder{
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }
-.sort-list .wrap{
+
+.sort-list .wrap {
   position: relative;
 }
-.sort-list .wrap ul{
+
+.sort-list .wrap ul {
   position: absolute;
   text-align: left;
   top: 55px;
@@ -758,120 +869,143 @@ form :where(input, select, textarea)::placeholder{
   display: none;
   animation: var(--fade);
 }
-.sort-list .wrap ul.show{
+
+.sort-list .wrap ul.show {
   display: block;
 }
-.sort-list ul li a{
+
+.sort-list ul li a {
   display: block;
   padding: 5px 20px;
   transition: var(--transition-background), var(--transition-color);
 }
-.sort-list ul li a:hover,.sort-list ul li.active a{
+
+.sort-list ul li a:hover,
+.sort-list ul li.active a {
   color: var(--white-color);
   background-color: var(--dark-color);
 }
-.sort-data{
+
+.sort-data {
   display: none;
   animation: var(--fade);
 }
-.sort-data.active{
+
+.sort-data.active {
   display: block;
 }
 
 /**************************************** Banner ****************************************/
-.banner{
+.banner {
   background-color: var(--light-color);
   background-image: url(assets/banner.png);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position-x: right; */
   background-origin: border-box;
 }
-.banner .content{
+
+.banner .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
 }
-.banner .content span{
+
+.banner .content span {
   font-size: var(--fs14);
   font-weight: var(--fw600);
   text-transform: uppercase;
 }
-.banner h3{
+
+.banner h3 {
   --fs-max: 80px;
 }
+
 /**************************************** From-blog ****************************************/
-.fromblog .dot-title{
+.fromblog .dot-title {
   --primary-font: var(--secondary-font);
   --fs14: 18px;
   --fw600: 400;
   margin-top: 15px;
 }
-.fromblog .dot-info > a{
+
+.fromblog .dot-info>a {
   display: inline-block;
   font-size: 12px;
   text-transform: uppercase;
   border: 1px solid var(--light-color);
   padding: 1px 10px;
-  transition: var(--transition-background),var(--transition-color),var(--transition-border);
+  transition: var(--transition-background), var(--transition-color), var(--transition-border);
 }
-.fromblog .dot-info > a:hover{
+
+.fromblog .dot-info>a:hover {
   background-color: var(--dark-color);
   color: var(--white-color);
   border-color: var(--dark-color);
 }
-.fromblog .button{
+
+.fromblog .button {
   text-align: center;
   margin-top: 40px;
 }
+
 /**************************************** Footer ****************************************/
-.inner-footer{
+.inner-footer {
   background-color: var(--flashwhite-color);
   line-height: 1.4;
   padding-bottom: 30px;
   padding-top: 50px;
 }
-.inner-footer .wrap > div{
+
+.inner-footer .wrap>div {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
   gap: 10px;
 }
-.inner-footer .subscribe{
+
+.inner-footer .subscribe {
   width: 100%;
 }
-.inner-footer .top .subscribe h3{
+
+.inner-footer .top .subscribe h3 {
   margin-bottom: 20px;
 }
-.inner-footer p{
+
+.inner-footer p {
   font-size: var(--fs14);
 }
-.inner-footer .search{
+
+.inner-footer .search {
   max-width: 400px;
 }
-.inner-footer .search .input{
+
+.inner-footer .search .input {
   font-family: var(--fs14);
   border: 2px solid var(--dark-color);
 }
-.inner-footer .bottom{
+
+.inner-footer .bottom {
   padding-top: 30px;
 }
 
 
 /**************************************** Above screen width: 992px ****************************************/
-@media (min-width:768px){
-  .banner{
+@media (min-width:768px) {
+  .banner {
     background-size: contain;
   }
 }
+
 @media (min-width: 992px) {
   .menu-trigger {
     display: none;
   }
+
   .header-center nav {
     display: grid;
   }
+
   .header-left .list-inline {
     display: block;
   }
@@ -883,16 +1017,19 @@ form :where(input, select, textarea)::placeholder{
     grid-template-columns: 2fr 1fr;
     gap: 60px;
   }
+
   .mega-content .links {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
     gap: 15px;
   }
+
   nav.menu .sub-mega {
     left: 0;
     right: 0;
     padding: 50px 0;
   }
+
   nav.menu :where(.sub-menu, .sub-mega) {
     position: absolute;
     top: auto;
@@ -903,6 +1040,7 @@ form :where(input, select, textarea)::placeholder{
     display: none;
     animation: var(--fade);
   }
+
   nav.menu li:hover :where(.sub-menu, .sub-mega) {
     display: block;
   }
@@ -910,25 +1048,20 @@ form :where(input, select, textarea)::placeholder{
   nav.menu .sub-menu {
     padding: 10px 0;
   }
-  nav.menu .sub-menu li {
-    padding: 5px 30px;
+
+  nav.menu .sub-menu li a {
+    margin: 5px 30px;
+    display: inline-block;
+    width: 100%;
   }
-  /* .dotgrid .dot-image .label {
-    top: auto;
-    bottom: 20px;
-  }
-  .dotgrid .dot-image .label span {
-    font-size: 12px;
-    font-weight: var(--fw600);
-    background-color: var(--primary-color);
-    color: var(--white-color);
-  } */
+
 
   /* slider  */
 
   .slider .ob-cover {
     height: calc(100vh - 80px);
   }
+
   .slider .title-info {
     position: absolute;
     bottom: 0;
@@ -937,64 +1070,77 @@ form :where(input, select, textarea)::placeholder{
     background-color: transparent;
 
   }
+
   .slider h3 {
     --fs-max: 80px;
     color: var(--white-color);
   }
+
   .slider .button a {
     border-color: var(--white-color);
     color: var(--white-color);
   }
-  .slider .button a:hover{
+
+  .slider .button a:hover {
     border-color: var(--dark-color);
   }
-  .scrollto .wrapper{
+
+  .scrollto .wrapper {
     --display: grid;
     padding: 0;
     overflow: unset;
     scroll-snap-type: unset;
     overscroll-behavior-inline: unset;
   }
-  .scrollto .wrapper .item{
+
+  .scrollto .wrapper .item {
     width: unset;
   }
 
-  .inner-footer .wrap > div{
+  .inner-footer .wrap>div {
     flex-flow: nowrap;
   }
-  .inner-footer .subscribe{
+
+  .inner-footer .subscribe {
     width: unset;
   }
-  .banner{
-  background-position-x: right;
+
+  .banner {
+    background-position-x: right;
 
   }
-  
+
 }
-@media (max-width:480px){
-  .carousel .dotgrid .item{
+
+@media (max-width:480px) {
+  .carousel .dotgrid .item {
     width: 270px;
   }
 }
+
 @media (min-width: 1200px) {
   .container.wide {
     --mx-width: 1720px;
     --gutter: 40px;
   }
 }
+
 @media (min-width: 1400px) {
   .mega-content {
     grid-template-columns: 1fr 1fr;
   }
-  .carousel .inner-wrapper{
+
+  .carousel .inner-wrapper {
     max-width: 1250px;
     margin: 0 auto;
     padding: 0 40px;
   }
-  .carousel .inner-wrapper > .swiper-button-next{
+
+  .carousel .inner-wrapper>.swiper-button-next {
     right: -40px;
   }
-  .carousel .inner-wrapper > .swiper-button-prev{
+
+  .carousel .inner-wrapper>.swiper-button-prev {
     left: -40px;
   }
 }
